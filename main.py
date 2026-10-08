@@ -1,2 +1,3 @@
-import math
+from math import *
 
+print(cos(1))
