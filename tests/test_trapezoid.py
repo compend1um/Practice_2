@@ -1,0 +1,3 @@
+from source.quadrature.trapezoid import trapezoid
+
+print(trapezoid(lambda x: (x**2 - 4), 2, 10, 10**(-10)))
