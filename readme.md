@@ -3,7 +3,9 @@
 project/
 ├── README.md
 ├── requirements.txt
-├── src/
+├── manuals
+│   ├── Пр_з__2___Вычисление_определённых_интегралов__2026_.pdf
+├── source/
 │   ├── __init__.py
 │   ├── quadrature/
 │   │   ├── __init__.py
