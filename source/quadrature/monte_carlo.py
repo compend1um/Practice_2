@@ -13,13 +13,16 @@ def monte_carlo(f, a, b, eps, rng, n):
         tolerance = ((b - a) * sigma_f) / np.sqrt(n)
 
         ci = (
-            result - 1.96 * tolerance, #ci - доверительный интервал, диапазон значений в котором точно находится нужное нам значение)))
+            result - 1.96 * tolerance, #ci - доверительный интервал, диапазон значений в котором точно находится нужное нам значение площади)))
             result + 1.96 * tolerance,
         )
 
         if tolerance < eps:
             return float(f"{result:.5f}"), float(f"{tolerance:.5f}"), (float(f"{ci[0]:.5f}"), float(f"{ci[1]:.5f}"))
 
-        n*=10
+        n*=4
+
+
+        #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 
