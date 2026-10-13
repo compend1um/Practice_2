@@ -9,18 +9,19 @@ def monte_carlo(f, a, b, eps, rng, n):
 
         result = (b - a) * np.mean(y)
 
-        sigma_f = np.std(y) # стандартное отклонение (как в тетради у макса)
+        sigma_f = np.std(y, ddof=1) # стандартное отклонение (как в тетради у макса)
         tolerance = ((b - a) * sigma_f) / np.sqrt(n)
 
         ci = (
             result - 1.96 * tolerance, #ci - доверительный интервал, диапазон значений в котором точно находится нужное нам значение площади)))
             result + 1.96 * tolerance,
         )
+        relative_tolerance = tolerance/abs(result)
 
-        if tolerance < eps:
-            return float(f"{result:.5f}"), float(f"{tolerance:.5f}"), (float(f"{ci[0]:.5f}"), float(f"{ci[1]:.5f}"))
+        if relative_tolerance < eps:
+            return f"{result:.5f}", f"{relative_tolerance:.5f}", (f"{ci[0]:.5f}", f"{ci[1]:.5f}"), n
 
-        n*=4
+        n*=2
 
 
         #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
