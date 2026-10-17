@@ -17,8 +17,6 @@ def compare_pi_trapezoid(x):
     print("-" * 50)
 
 
-compare_pi_trapezoid(10**3)
-
 def compare_pi_monte_carlo(x):
     result, relative_tolerance, ci, n = monte_carlo(li, 2, x, 10**(-5), 42, 2200)
 
@@ -32,5 +30,3 @@ def compare_pi_monte_carlo(x):
     print(f"{'Разница:':<30}{difference:.5f}")
     print("-" * 50)
 
-
-compare_pi_monte_carlo(10**3)

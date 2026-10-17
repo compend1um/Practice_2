@@ -55,4 +55,3 @@ def build_table():
           "в папке project/data/output/normal_table",
           sep="")
 
-build_table()

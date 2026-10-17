@@ -22,8 +22,3 @@ def monte_carlo(f, a, b, eps, rng, n):
             return f"{result:.5f}", f"{relative_tolerance:.5f}", (f"{ci[0]:.5f}", f"{ci[1]:.5f}"), n
 
         n*=2
-
-
-        #aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-
