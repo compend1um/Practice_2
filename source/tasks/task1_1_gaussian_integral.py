@@ -4,6 +4,12 @@ from numpy import pi
 
 
 def replace_infinity_to_num(accuracy):
+    """
+    заменяет бесконечность в вехнем пределе интегрирования
+    на достаточно большое число, интегрирование по которое
+    не влияет на результат для заданной точности
+    """
+
     new_limit = 0
 
     while True:
@@ -38,8 +44,5 @@ def compare_gaussian_integral_with_pi(a, b, accuracy):
         f"{'Разница:':<35}{abs( float(result) - right_half ):.10f}",
         "-" * 50,
         sep="\n"
-
-
     )
 
-compare_gaussian_integral_with_pi(0, replace_infinity_to_num(10 ** (-11)), 10 ** (-10))

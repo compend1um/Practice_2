@@ -5,6 +5,8 @@ from pathlib import Path
 from numpy import pi
 
 
+# функция, по которой строится таблица:
+# функция гаусса под интегналом симпсона, умноженная на корень из единицы, деленной на два пи
 def function(z):
     value, _, _ = simpson(gaussian, 0, z, 10 ** (-5))
     return round(
@@ -23,6 +25,8 @@ def build_table():
     for column_value in grid_step_columns:
         for line_value in grid_step_lines:
 
+            # по вертикали единицы и десятые, по горизонтали - сотые
+            # в ячейке - значение функции от х, получаемого сложеним столбца и строчки
             value = function(column_value + line_value)
             table[column_value].append(value)
 
@@ -38,6 +42,11 @@ def build_table():
         sep="\n"
     )
 
+    # реализовал систему динамического подбора пути:
+    # __file__ определяет местоположение текущего .py
+    # каждый .parent отбрасывает путь в папку назад.
+    # (таким образом выбираемся из tasks/ в project/ )
+    # и прокладываем путь в папку с таблицами
     df.to_csv(Path(__file__).resolve().parent.parent.parent /"data"/"output"/"normal_table.csv")
     df.to_excel(Path(__file__).resolve().parent.parent.parent /"data"/"output"/"normal_table.xlsx")
     print("\n",
