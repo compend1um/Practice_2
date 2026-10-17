@@ -19,7 +19,9 @@ def replace_infinity_to_num(accuracy):
             return new_limit
 
 
-def compare_gaussian_integral_with_pi(a, b, accuracy):
+def compare_gaussian_integral_with_pi(
+        a=0, b=replace_infinity_to_num(10 ** (-11)), accuracy=10 ** (-10)
+):
 
     result, eps, number_segments = simpson(gaussian, a, b, accuracy)
 
