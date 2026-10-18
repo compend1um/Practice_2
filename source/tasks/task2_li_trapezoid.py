@@ -11,7 +11,3 @@ def calc_li_trapezoid(x):
     print(f"{'Количество отрезков:':<29}{n}")
     print("-" * 45)
 
-
-calc_li_trapezoid(10**3)
-calc_li_trapezoid(10**4)
-calc_li_trapezoid(10**5)

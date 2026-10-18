@@ -15,7 +15,3 @@ def calc_li_monte_carlo(x, eps=10**(-5), rng=42, n=2200):
     print(f"{'Количество точек:':<29}{n}")
     print("-" * 45)
 
-
-calc_li_monte_carlo(10**3)
-calc_li_monte_carlo(10**4)
-calc_li_monte_carlo(10**5)
