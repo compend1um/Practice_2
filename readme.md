@@ -12,8 +12,7 @@ project/
 │   │   ├── __init__.py
 │   │   ├── simpson.py
 │   │   ├── trapezoid.py
-│   │   ├── monte_carlo.py
-│   │   └── error_control.py
+│   │   └── monte_carlo.py
 │   ├── functions/
 │   │   ├── __init__.py
 │   │   ├── gaussian.py
@@ -30,16 +29,13 @@ project/
 │   ├── input/
 │   └── output/
 │       ├── normal_table.csv
-│       ├── normal_table.tex
-│       ├── li_results.csv
-│       └── figures/
+│       └── normal_table.xlsx
 ├── tests/
 │   ├── test_simpson.py
 │   ├── test_trapezoid.py
 │   ├── test_monte_carlo.py
 │   └── test_tasks.py
 └── scripts/
-    ├── run_all.py
-    └── make_report.sh
+    └── run_all.py
 
 ```
