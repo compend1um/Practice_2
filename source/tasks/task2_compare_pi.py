@@ -3,7 +3,7 @@ from source.functions.integral_logarithm import li
 from source.functions.primes import primes
 from source.quadrature.monte_carlo import monte_carlo
 
-def compare_pi_trapezoid(x=10 ** 3):
+def compare_pi_trapezoid(x):
     result, relative_tolerance, n = trapezoid(li, 2, x, 10**(-10))
 
     pi_x = primes(x)
@@ -17,7 +17,7 @@ def compare_pi_trapezoid(x=10 ** 3):
     print("-" * 50)
 
 
-def compare_pi_monte_carlo(x=10 ** 3):
+def compare_pi_monte_carlo(x):
     result, relative_tolerance, ci, n = monte_carlo(li, 2, x, 10**(-5), 42, 2200)
 
     pi_x = primes(x)

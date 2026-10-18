@@ -85,8 +85,12 @@ def menu():
 
         if users_choice == 5:
 
-            task2_compare_pi.compare_pi_trapezoid()
-            task2_compare_pi.compare_pi_monte_carlo()
+            task2_compare_pi.compare_pi_trapezoid(10 ** 3)
+            task2_compare_pi.compare_pi_trapezoid(10 ** 4)
+            task2_compare_pi.compare_pi_trapezoid(10 ** 5)
+            task2_compare_pi.compare_pi_monte_carlo(10 ** 3)
+            task2_compare_pi.compare_pi_monte_carlo(10 ** 4)
+            task2_compare_pi.compare_pi_monte_carlo(10 ** 5)
             pause()
 
         if users_choice == 0:
